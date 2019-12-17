@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Home</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <!--  Bootstrap + CSS    -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="../resources/css/my_styles.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<style>
+.myClassHey{
+  font-size: 35px;
+  /* background:  #3385ff; */
+}
+</style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href='/work_home'>
+      <img class="rounded-circle" src="https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/shelf-life/shelf-life-logo-black-text_white-bg/1569498-3-eng-US/shelf-life-logo-black-text_white-bg.jpg" alt="hi" width="90" height="40">
+    </a>
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Togglenavigation">
+        <span class="navbar-toggler-icon"></span>
+
+  </button> -->
+
+
+      <ul class="inline navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href='/work_home'>Home</a>
+        </li>
+      </ul>
+    <ul class="inline navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/setting">Account<span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    <ul class="inline navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/sales1">Sales</a>
+        </li>
+    </ul>
+    <ul class="inline navbar-nav mr-auto">
+        <li class ="nav-item">
+          <a class = "nav-link" href = "http://localhost:3000/inventory" target = "_self">Inventory</a>
+        </li>
+    </ul>
+    <ul class="inline navbar-nav mr-auto">
+        <li>
+          <a class="nav-link" href="http://localhost:3000/order_forms">Order Forms</a>
+        </li>
+    </ul>
+    <ul class="inline navbar-nav mr-auto">
+        <li>
+          <a class="nav-link" href='/send_order'>Send Order</a>
+        </li>
+    </ul>
+
+      <div class="form-inline my-2 my-lg-0">
+        <a href="/login">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
+        </a>
+      </div>
+
+  </nav>
+
+  <!-- end of nav bar -->
+
+
+  <div class="clearfix">
+    <div class="seperate">
+      <div class="jumbotron">
+        <div class="container">
+        <div class="card bg-primary text-white">
+        <center><span class = "card-header myClassHey"> Restaurant: {{name}}</span></canter>
+        </div>
+
+
+        <br>
+        <center>  Today's Sales: ${{salesdata}}</center>
+        <br>
+        <canvas id="myChart" width="200" height="100"></canvas>
+
+    <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {{time}},
+            datasets: [{
+              data: {{chartData}},
+              borderColor: "#3e95cd",
+              fill:false
+
+        }]
+      },
+      options: {
+      scales:{
+        yAxes:[{
+          scaleLabel:
+                    {
+                        display:true,
+                        labelString: 'Sales'
+                    }
+                  }],
+
+        xAxes:[{
+            scaleLabel:
+                    {
+                        display:true,
+                        labelString: {{Hour}}
+                    }
+                }],
+            },
+       title: {
+         display: true,
+         text: 'Todays Sales'
+       },
+       legend:{
+         display:false
+       }
+     }
+      });
+    </script>
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
+</body>
+
+</html>

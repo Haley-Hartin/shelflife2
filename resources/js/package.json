@@ -1,0 +1,72 @@
+{
+  "_from": "plotly",
+  "_id": "plotly@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha1-smcsPfiDM2Jb32hJgtDj9lIdeqo=",
+  "_location": "/plotly",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "plotly",
+    "name": "plotly",
+    "escapedName": "plotly",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/plotly/-/plotly-1.0.6.tgz",
+  "_shasum": "b2672c3df88333625bdf684982d0e3f6521d7aaa",
+  "_spec": "plotly",
+  "_where": "/Users/haleyhartin/Documents/ShelfLife/resources/js",
+  "author": {
+    "name": "Alexander Daniel",
+    "email": "alex@lesinstruments.com",
+    "url": "http://lesinstruments.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/alexander-daniel/plotly-nodejs/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "jade": "^1.11.0",
+    "mkdirp": "~0.5.0",
+    "moment": "^2.24.0",
+    "pug": "^2.0.4",
+    "replace": "^1.1.1",
+    "string": "^3.3.3"
+  },
+  "deprecated": false,
+  "description": "Simple node.js wrapper for the plot.ly API",
+  "devDependencies": {
+    "random-signal": "0.0.2",
+    "tap": "^0.4.13",
+    "tape": "^3.0.3"
+  },
+  "homepage": "https://github.com/alexander-daniel/plotly-nodejs#readme",
+  "keywords": [
+    "plotting",
+    "graphs",
+    "interactive",
+    "data",
+    "visualization"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "plotly",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexander-daniel/plotly-nodejs.git"
+  },
+  "scripts": {
+    "test": "tap test"
+  },
+  "version": "1.0.6"
+}
